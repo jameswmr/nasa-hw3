@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+virt-install \
+--name=b10902063 \
+--ram=8192 \
+--vcpus=2 \
+--disk=/tmp2/b10902063/ubuntu.qcow2,size=20 \
+--mac=52:54:F8:90:20:63 \
+--graphics=vnc,port=40001,listen=0.0.0.0,password=virt \
+--cdrom=/tmp2/nasa-hw3/ubuntu.iso \
+--os-variant=ubuntu22.04 \
+--check all=off
